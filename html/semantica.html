@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Semantica</title>
+</head>
+<body>
+    <p>Hola, esto es un pequeño <strong>ejemplo</strong>.</p>
+
+    <p>El resultado de 24<sup>2</sup> es el valor de X<sub>a</sub>.</p>
+
+    <p>
+        <q cite="http://www.imdb.com/title/tt0468569/">
+          Hay hombres que solo quieren ver arder el mundo.
+        </q>
+      </p>
+
+      <p>
+        El término <dfn><abbr title="Kilómetro">Km</abrr></dfn> es una unidad de longitud.
+      </p>
+
+      <p>Pulsa las teclas <kbd>CTRL</kbd>+<kbd>T</kbd>...</p>
+
+     <style>
+     kbd {
+       font-family: "Victor Mono", monospace;
+       padding: 2px 6px;
+       background: #eee;
+       border: 3px solid #bbb;
+       border-top-width: 1px;
+       border-bottom: 3px solid #777;
+      }
+     </style>
+
+<ul>
+    <li><a rel="author" href="http://www.emezeta.com/">Emezeta</a></li>
+    <li><a href="http://lenguajecss.com/" target="_blank">LenguajeCSS</a></li>
+    <li><a href="http://pagina.com/documento.pdf" download="A-38.pdf">PDF</a></li>
+    <li><a href="http://pagina.com/documento-en.pdf" hreflang="en">PDF</a></li>
+  </ul>
+
+  <div class="articulo">
+    <h1>Título del artículo</h1>
+    <p class="intro">Pequeña introducción.</p>
+    <p class="contenido">Aquí va el texto del artículo en cuestión con sus detalles.</p>
+    <p class="pie">Escrito por Manz</p>
+  </div>
+
+  <article>
+    <header>
+      <h1>Título del artículo</h1>
+      <p class="intro">Pequeña introducción.</p>
+    </header>
+    <p class="contenido">Aquí va el texto del artículo en cuestión con sus detalles.</p>
+    <footer>
+      <p>Escrito por Manz.</p>
+    </footer>
+  </article>
+
+  <article class="post">
+    <p>Este sería el texto del artículo.</p>
+    <article class="comentario">
+      <p>Aquí iría el texto del comentario.</p>
+    </article>
+  </article>
+
+
+</body>
+</html>
