@@ -1,26 +1,20 @@
-var array;
+let enlaces_header = document.querySelectorAll(".enlaces-header")[0];
+let icon_hamburguer = true;
 
-function cargarpagina(){
-     array = [
-        {nombre:"juan",codigo:"192070",doc:"123456",prog:"ing. de sistemas"},
-        {nombre:"Johan",codigo:"192070",doc:"123456",prog:"ing. de sistemas"},
-        {nombre:"alberto",codigo:"192070",doc:"123456",prog:"ing. de sistemas"}
-    ];
-    console.log(array);
-}
-
-function calcular(){
-    var nombre = $("#nombre").val();
-    for(let i =0;i<array.length;i++){
-        if(nombre==array[i].nombre){
-            console.log("EL NOMBRE ENCONTRADO ES: " +nombre);
-            break;
-            
-        }else{
-            console.log("QUE PASA MANI "+nombre+ " ESO NO EXISTE ");
-        }
+document.querySelectorAll(".hamburguer")[0].addEventListener("click", function(){
+    if(icon_hamburguer){
+        document.querySelectorAll(".hamburguer")[0].style.color="#fff";
+        icon_hamburguer = false;
+    }else{
+        document.querySelectorAll(".hamburguer")[0].style.color="#000";
+        icon_hamburguer = true;
 
     }
-    
-    
-}
+
+    enlaces_header.classList.toggle("hamburgueropen");
+})
+
+document.querySelector(".enlaces.header")[0].addEventListener("click", function(){
+    enlaces_header.classList.toggle("hamburgueropen");
+    document.querySelectorAll(".hamburguer")[0].style.color="#000";
+})

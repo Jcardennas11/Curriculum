@@ -46,6 +46,7 @@ nav {
 .enlaces-header {
     font-weight: 300;
     margin: auto;
+    transition: all ease-in-out .6s;
 }
 
 .nav .enlaces-header a {
@@ -61,6 +62,21 @@ nav {
     background-color: #d03d3d;
     border-color: #d03d3d;
     transition: all ease-in-out .5s;
+}
+
+.hamburguer{
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    z-index: 100;
+    cursor: pointer;
+    transition: color 0.5s ease-in;
+    display: none;
+}
+
+.hamburguer > i{
+    font-size: 25px;
+    line-height: 80px;
 }
 
 .titulospro {
@@ -324,4 +340,91 @@ footer{
 .social-media > a > i:hover{
     background-color: #d03d3d;
     border-color: #d03d3d;
+}
+
+/*#####################  BREAKPOINTS  ###########################*/
+
+@media screen and (max-width: 700px){
+    .hamburguer{
+        display: block;
+    }
+    .enlaces-header{
+        position: fixed;
+        background-color: #d03d3d;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        clip-path: circle(0.0% at 0 0);
+    }
+
+    .nav .hamburgueropen{
+        clip-path: circle(150.0% at 0 0);
+    }
+
+    .nav .enlaces-header a{
+        color: #fff;
+        background-color: #993e3e;
+        text-transform: uppercase;
+        font-weight: 800;
+        width: 50%;
+        text-align: center;
+        margin-top: 20px;
+
+    }
+
+    h1{
+        font-size: 25px;
+        margin-top: 10px;
+
+    }
+
+    .textos-header{
+        margin: 0px;
+
+    }
+
+    .contenido-header{
+        display: block;
+        height: auto;
+        margin-bottom: 15px;
+    }
+    .contenido-header < img{
+        margin: 25px 0 0 0;
+        width: 150px;
+        height: 150px;
+
+    }
+
+
+    /*--------------------------------section education-------------------------------*/
+
+    .education{
+        width: 90%;
+        margin-bottom: 15px;
+    }
+
+    /*--------------------------------section certificates-------------------------------*/
+
+    .certificantes{
+        width: 45%;
+        
+    }
+    .certificantes img{
+        height: 80px;
+    }
+
+
+    /*--------------------------------section footer-------------------------------*/
+
+    .partFooter img{
+        display: none;
+    }
+
+    .partFooter{
+        width: 80%;
+    }
 }
